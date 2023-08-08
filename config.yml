@@ -1,0 +1,174 @@
+# see example config here: https://github.com/adityatelange/hugo-PaperMod/blob/7e5d17f08ac68ef7a365ba63d2f34a8c9f3a962a/config.yml
+
+baseURL: https://blog.birki.io/
+languageCode: en-us
+title: 📖 blog
+theme: [hugo-video, PaperMod]
+
+paginate: 15
+enableEmoji: true
+enableRobotsTXT: true
+enableInlineShortcodes: true
+
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+  # https://gohugo.io/getting-started/configuration-markup/#goldmark
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      linkifyProtocol: https
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer:
+        apostrophe: '&rsquo;'
+        disable: false
+        ellipsis: '&hellip;'
+        emDash: '&mdash;'
+        enDash: '&ndash;'
+        leftAngleQuote: '&laquo;'
+        leftDoubleQuote: '&ldquo;'
+        leftSingleQuote: '&lsquo;'
+        rightAngleQuote: '&raquo;'
+        rightDoubleQuote: '&rdquo;'
+        rightSingleQuote: '&rsquo;'
+    parser:
+      attribute:
+        block: false
+        title: true
+      autoHeadingID: true
+      autoHeadingIDType: github
+      wrapStandAloneImageWithinParagraph: true
+    renderer:
+      hardWraps: false
+      unsafe: false
+      xhtml: false
+
+  # https://gohugo.io/getting-started/configuration-markup/#highlight
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    hl_inline: false
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: false
+    noHl: false
+    style: github-dark
+    tabWidth: 4
+
+params:
+  env: production
+  author: Grant Birkinbine
+  defaultTheme: auto
+
+  homeInfoParams:
+    Title: blog.birki.io
+    Content: >
+      #### About
+
+      - 👤 Grant Birkinbine's Blog
+
+      ---
+
+      📖 To read a post below, simply click anywhere on the cover image or it's description. Enjoy!
+
+  cover:
+    linkFullImages: false # don't make cover images clickable. Leads to bad UX
+
+  # ---- opengraph ----
+  title: Grant Birkinbine's Blog
+  description: blog | web posts | articles | notes | thoughts | ideas
+  images:
+    - default.png
+  # ------- end -------
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  displayFullLangName: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowBreadCrumbs: true
+  ShowToc: true # table of contents on blog posts
+  # comments: false
+  # images: ["papermod-cover.png"]
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/GrantBirki/blog"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/grantbirkinbine/"
+    - name: twitter
+      url: "https://twitter.com/grantbirki"
+    - name: instagram
+      url: "https://instagram.com/grantbirki"
+
+  # editPost:
+  #   URL: "https://github.com/GrantBirki/blog/tree/main/content"
+  #   Text: "Suggest Changes" # edit text
+  #   appendFilePath: true # to append file path to Edit link
+
+  # label:
+  #     text: "Home"
+  #     icon: icon.png
+  #     iconHeight: 35
+
+  # analytics:
+  #     google:
+  #         SiteVerificationTag: "XYZabc"
+
+  assets:
+    disableHLJS: true
+  #     favicon: "<link / abs url>"
+  #     favicon16x16: "<link / abs url>"
+  #     favicon32x32: "<link / abs url>"
+  #     apple_touch_icon: "<link / abs url>"
+  #     safari_pinned_tab: "<link / abs url>"
+
+  # cover:
+  #     hidden: true # hide everywhere but not in structured data
+  #     hiddenInList: true # hide on list pages and home
+  #     hiddenInSingle: true # hide on single page
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - name: Search 🔍
+      url: search
+      weight: 5
+    - name: Archive 📚
+      url: archives
+      weight: 10
+    - name: Tags 🏷️
+      url: tags
+      weight: 15
+    - name: Categories 📂
+      url: categories
+      weight: 20
