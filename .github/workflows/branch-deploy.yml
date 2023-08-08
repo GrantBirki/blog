@@ -11,8 +11,6 @@ permissions:
   deployments: write
   contents: write
   checks: read
-  pages: write
-  id-token: write
 
 # set an environment variable for use in the jobs pointing to my site
 env:
@@ -46,12 +44,11 @@ jobs:
         id: branch-deploy
         with:
           trigger: ".deploy"
-          environment: "github-pages"
-          production_environment: "github-pages"
+          environment_targets: production
           skip_completing: "true" # we will complete the deployment manually in the 'result' job
           admins: "GrantBirki"
 
-  # build the github-pages site with hugo
+  # build the site with hugo
   build:
     needs: trigger
     if: ${{ needs.trigger.outputs.continue == 'true' }} # only run if the trigger job set continue to true
@@ -77,38 +74,37 @@ jobs:
           HUGO_VERSION: ${{ steps.hugo-version.outputs.HUGO_VERSION }}
         run: sudo dpkg -i vendor/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
 
-      # configure the GitHub Pages action
-      - name: setup pages
-        id: pages
-        uses: actions/configure-pages@v3.0.6
-
       # build the site with hugo
       - name: build with hugo
         run: |
           hugo --gc --verbose \
-            --baseURL ${{ steps.pages.outputs.base_url }}
+            --baseURL ${{ env.web_url }}
 
       # this step is custom to my site and adds a 'commit' version to the site
       - name: write build version
         run: echo ${GITHUB_SHA} > ./public/version.txt
 
       # upload the built site as an artifact for the deploy step
-      - name: upload artifact
-        uses: actions/upload-pages-artifact@v2.0.0
+      - uses: actions/upload-artifact@v3
         with:
           path: ./public
 
-  # deploy to GitHub Pages
+  # deploy to cloudflare pages
   deploy:
     needs: [ trigger, build ]
     if: ${{ needs.trigger.outputs.continue == 'true' }} # only run if the trigger job set continue to true
     runs-on: ubuntu-latest
 
     steps:
-      # deploy the site to GitHub Pages
+      # deploy the site to cloudflare pages
       - name: deploy
         id: deployment
-        uses: actions/deploy-pages@v2.0.3
+        uses: cloudflare/wrangler-action@20ea5060497220b70723b2c5fdf847822eaaa7fa # pin@3.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          wranglerVersion: '3.4.0'
+          command: pages publish public/ --project-name=blog-birki-io --branch=main
 
   # update the deployment result - manually complete the deployment that was created by the branch-deploy action
   result:
