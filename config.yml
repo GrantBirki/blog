@@ -85,11 +85,12 @@ params:
     Content: >
       #### About
 
+
       - 👤 Grant Birkinbine's Blog
 
       ---
 
-      📖 To read a post below, simply click anywhere on the cover image or it's description. Enjoy!
+      📖 To read a post below, simply click anywhere on the cover image or the post's description. Enjoy!
 
   cover:
     linkFullImages: false # don't make cover images clickable. Leads to bad UX
