@@ -105,14 +105,14 @@ params:
   # ------- end -------
 
   ShowReadingTime: true
-  ShowShareButtons: false
+  ShowShareButtons: true
   ShowPostNavLinks: true
   displayFullLangName: true
   ShowCodeCopyButtons: true
   ShowRssButtonInSectionTermList: true
   ShowBreadCrumbs: true
   ShowToc: true # table of contents on blog posts
-  # comments: false
+  comments: false
   # images: ["papermod-cover.png"]
 
   socialIcons:
@@ -125,10 +125,10 @@ params:
     - name: instagram
       url: "https://instagram.com/grantbirki"
 
-  # editPost:
-  #   URL: "https://github.com/GrantBirki/blog/tree/main/content"
-  #   Text: "Suggest Changes" # edit text
-  #   appendFilePath: true # to append file path to Edit link
+  editPost:
+    URL: "https://github.com/GrantBirki/blog/tree/main/content"
+    Text: "Suggest changes" # edit text
+    appendFilePath: true # to append file path to Edit link
 
   # label:
   #     text: "Home"
