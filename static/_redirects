@@ -1,0 +1,13 @@
+# https://developers.cloudflare.com/pages/platform/redirects
+
+# remove trailing slashes
+/posts/:post/ /posts/:post 301
+/search/ /search 301
+/archives/ /archives 301
+/tags/ /tags 301
+/tags/:tag/ /tags/:tag 301
+/categories/ /categories 301
+/categories/:category/ /categories/:category 301
+
+# blog -> journal redirects
+/posts/greek-islands https://journal.birki.io/posts/greek-islands/
