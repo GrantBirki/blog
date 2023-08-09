@@ -107,5 +107,5 @@ or
 This project uses [Cloudflare Pages](https://pages.cloudflare.com/) for static site hosting. A few things to note:
 
 - This blog is a 100% static site. Due to this, I safely enabled `.html` file caching on cloudflare's edge network
-- The browser cache TTL is set to 8 hours. This does **not** include the `.html` files (blog pages and their text). This does include images, css, and js files
-- The edge cache TTL is set to 2 hours currently. This cached content includes images, css, and js files. New content will always be pulled down without issues (think "new blog posts") but modified content (think "updated blog posts") may take up to 2 hours to be updated in cloudflare's edge cache. `.html` files will be picked up by users once they are updated in the edge cache (as they are not cached by browsers) but other assets could need another 8 hours to be updated in the browser cache
+- The **browser cache TTL** is set to 2 hours. This does **not** include the `.html` files (blog pages and their text). This does include images, css, and js files
+- The **edge cache TTL** is set to 2 hours. This cached content includes images, css, and js files. New content will always be pulled down without issues (think "new blog posts") but modified content (think "updated blog posts") may take up to 2 hours to be updated in cloudflare's edge cache. `.html` files will be picked up by users once they are updated in the edge cache (as they are not cached by browsers) but other assets could need another (extra) 2 hours (or less) to be updated in the browser cache
