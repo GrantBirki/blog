@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Create a Last-Modified header compliant date string
+lastModDate=$(date -u +"%a, %d %b %Y %H:%M:%S GMT")
+
+# replace {{ LastModHeader }} with the date string in the 'public/_headers' file
+sed -i -e "s/{{ LastModHeader }}/$lastModDate/g" public/_headers
+
