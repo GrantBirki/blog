@@ -138,6 +138,9 @@ params:
 
   assets:
     disableHLJS: true
+
+    # needed for cloudflare since it modifies css and js files with minification
+    disableFingerprinting: true
   #     favicon: "<link / abs url>"
   #     favicon16x16: "<link / abs url>"
   #     favicon32x32: "<link / abs url>"
