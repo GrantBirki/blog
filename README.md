@@ -109,3 +109,13 @@ This project uses [Cloudflare Pages](https://pages.cloudflare.com/) for static s
 - This blog is a 100% static site. Due to this, I safely enabled `.html` file caching on cloudflare's edge network
 - The **browser cache TTL** is set to 2 hours. This does **not** include the `.html` files (blog pages and their text). This does include images, css, and js files
 - The **edge cache TTL** is set to 2 hours. This cached content includes images, css, and js files. New content will always be pulled down without issues (think "new blog posts") but modified content (think "updated blog posts") may take up to 2 hours to be updated in cloudflare's edge cache. `.html` files will be picked up by users once they are updated in the edge cache (as they are not cached by browsers) but other assets could need another (extra) 2 hours (or less) to be updated in the browser cache
+
+### Why Cloudflare Pages
+
+Nearly all of my other projects are hosted on GitHub Pages, so why did I choose Cloudflare Pages for this project?
+
+- I wanted to try something new
+- GitHub Pages has a "limit" of 100GB of bandwidth per month
+- I needed to setup a [`_redirects`](./static/_redirects) file with Cloudflare to point `blog.birki.io` -> `journal.birki.io` where appropriate
+
+The main annoyance with Cloudflare Pages is that if I make a **modification** to page `/foo/bar` then it will not show up right away as it is **cached** on cloudflare's edge network. If necessary, I would have to go into Cloudflare's UI and purge the entire `birki.io` domain which would clear the cache for all of my projects. GitHub Pages works a lot better in this regard as it will always serve the latest content on new deployments / modifications.
