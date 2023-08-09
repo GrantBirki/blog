@@ -3,3 +3,5 @@
 # cache buster - the header value is replaced in CI
 https://blog.birki.io/*
   Last-Modified: {{ LastModHeader }}
+https://blog.birki.io
+  Last-Modified: {{ LastModHeader }}
