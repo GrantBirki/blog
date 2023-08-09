@@ -101,3 +101,11 @@ or
 ```
 
 > To learn more about the theme that provides video support, check out the [hugo-video](https://github.com/martignoni/hugo-video) repository
+
+## Cloudflare Pages 🌩
+
+This project uses [Cloudflare Pages](https://pages.cloudflare.com/) for static site hosting. A few things to note:
+
+- This blog is a 100% static site. Due to this, I safely enabled `.html` file caching on cloudflare's edge network
+- The browser cache TTL is set to 8 hours. This does **not** include the `.html` files (blog pages and their text). This does include images, css, and js files
+- The edge cache TTL is set _really_ high. It is set to 1 month currently. This is because content only ever changes when a deployment happens. During the deployment process, we wipe cloudflare's edge cache for the entire `blog.birki.io` domain. This ensures that the latest content is always served to the user upon deployment. The only cached content that could be served "stale" (on a deployment) is content left in the user's browser cache with an 8 hour TTL. This content includes images, css, and js files. This is not a big deal since these files are not updated often and are not critical to the user experience. New images will be pulled down anyways without problems, modified images will leave the user's browser cache in 8 hours or if the user clears their cache
