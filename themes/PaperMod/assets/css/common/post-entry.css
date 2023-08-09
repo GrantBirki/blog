@@ -20,14 +20,14 @@
 }
 
 .entry-content-cozy {
-    margin: 5px !important;
+    margin: 8px !important;
 }
 
 /* make hr more of a linebreak for cozy */
 .entry-content-cozy hr {
         background:none;
         clear:both;
-        padding: 5px;
+        padding: 2px;
         float:none;
         width:100%;
         height:1px;
