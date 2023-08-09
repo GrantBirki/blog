@@ -14,7 +14,7 @@ permissions:
 
 # set an environment variable for use in the jobs pointing to my site
 env:
-  web_url: https://blog.birki.io
+  web_url: https://blog.birki.io/
 
 jobs:
   # branch-deploy trigger job
@@ -76,9 +76,7 @@ jobs:
 
       # build the site with hugo
       - name: build with hugo
-        run: |
-          hugo --gc --verbose \
-            --baseURL ${{ env.web_url }}
+        run: hugo --gc --verbose --baseURL ${{ env.web_url }}
 
       # this step is custom to my site and adds a 'commit' version to the site
       - name: write build version
