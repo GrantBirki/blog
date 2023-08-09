@@ -1,13 +1,19 @@
 # https://developers.cloudflare.com/pages/platform/redirects
 
-# remove trailing slashes
-/posts/:post/ /posts/:post 301
-/search/ /search 301
-/archives/ /archives 301
-/tags/ /tags 301
-/tags/:tag/ /tags/:tag 301
-/categories/ /categories 301
-/categories/:category/ /categories/:category 301
-
 # blog -> journal redirects
-/posts/greek-islands https://journal.birki.io/posts/greek-islands/
+/posts/apashe https://journal.birki.io/posts/apashe 301
+/posts/bean-quest-1 https://journal.birki.io/posts/bean-quest-1 301
+/posts/bean-quest-2 https://journal.birki.io/posts/bean-quest-2 301
+/posts/caragol-uk-trip https://journal.birki.io/posts/caragol-uk-trip 301
+/posts/colombia https://journal.birki.io/posts/colombia 301
+/posts/december https://journal.birki.io/posts/december 301
+/posts/edf https://journal.birki.io/posts/edf 301
+/posts/europe https://journal.birki.io/posts/europe 301
+/posts/example https://journal.birki.io/posts/example 301
+/posts/greek-islands https://journal.birki.io/posts/greek-islands 301
+/posts/london-and-norway https://journal.birki.io/posts/london-and-norway 301
+/posts/london-and-the-cotswolds https://journal.birki.io/posts/london-and-the-cotswolds 301
+/posts/morocco https://journal.birki.io/posts/morocco 301
+/posts/ouray https://journal.birki.io/posts/ouray 301
+/posts/paris https://journal.birki.io/posts/paris 301
+/posts/taiwan https://journal.birki.io/posts/taiwan 301
