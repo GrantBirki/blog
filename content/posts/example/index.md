@@ -1,13 +1,13 @@
 ---
 title: "Example"
 author: "Hugo Authors"
-description: "This is an example post containing full markdown syntax and usage"
+description: "This is an example blog post containing full markdown syntax and usage"
 date: 2000-01-01T00:00:00-00:00
 draft: false
 
 tags: ["markdown", "css", "html", "themes"]
 categories: ["themes", "syntax"]
-aliases: ["migrate-from-jekyl"] # redirect, alias, shorthand url
+aliases: ["markdown-example"] # redirect, alias, shorthand url
 ShowToc: true
 TocOpen: true
 searchHidden: false
