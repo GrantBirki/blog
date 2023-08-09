@@ -99,12 +99,12 @@ jobs:
       # deploy the site to cloudflare pages
       - name: deploy
         id: deployment
-        uses: cloudflare/wrangler-action@20ea5060497220b70723b2c5fdf847822eaaa7fa # pin@3.0.0
+        uses: cloudflare/wrangler-action@3.0.1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          wranglerVersion: '3.4.0'
-          command: pages publish public/ --project-name=blog-birki-io --branch=main
+          wranglerVersion: '3.5.0'
+          command: pages deploy public/ --project-name=blog-birki-io --branch=main
 
   # update the deployment result - manually complete the deployment that was created by the branch-deploy action
   result:
