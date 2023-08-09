@@ -65,10 +65,6 @@ jobs:
       - name: build with hugo
         run: hugo --gc --verbose --baseURL ${{ env.web_url }}
 
-      # run a script to bust the cache on the site via cloudflare _headers file
-      - name: cache buster
-        run: script/cache-buster
-
       - name: write build version
         run: echo ${GITHUB_SHA} > ./public/version.txt
 
