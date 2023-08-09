@@ -85,14 +85,14 @@ params:
   homeInfoParams:
     Title: blog.birki.io
     Content: >
-      #### About
+      #### Grant Birkinbine's Blog
 
-
-      - 👤 Grant Birkinbine's Blog
+    SubContent: >
+      - A web blog centered around technology, security, open source, and other topics of interest.
 
       ---
 
-      📖 To read a post below, simply click anywhere on the cover image or the post's description. Enjoy!
+      - To read a post below, simply click anywhere on the cover image or the post's description. Enjoy!
 
   cover:
     linkFullImages: false # don't make cover images clickable. Leads to bad UX
