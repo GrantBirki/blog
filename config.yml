@@ -97,6 +97,19 @@ params:
   cover:
     linkFullImages: false # don't make cover images clickable. Leads to bad UX
 
+  keywords:
+    - blog
+    - web posts
+    - articles
+    - thoughts
+    - ideas
+    - technology
+    - programming
+    - security
+    - privacy
+    - policies
+    - travel
+
   # ---- opengraph ----
   title: Grant Birkinbine's Blog
   description: blog | web posts | articles | notes | thoughts | ideas
