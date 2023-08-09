@@ -14,7 +14,7 @@ permissions:
 
 # set an environment variable for use in the jobs pointing to my site
 env:
-  web_url: https://blog.birki.io
+  web_url: https://blog.birki.io/
 
 jobs:
   # branch-deploy trigger job
@@ -76,9 +76,7 @@ jobs:
 
       # build the site with hugo
       - name: build with hugo
-        run: |
-          hugo --gc --verbose \
-            --baseURL ${{ env.web_url }}
+        run: hugo --gc --verbose --baseURL ${{ env.web_url }}
 
       # this step is custom to my site and adds a 'commit' version to the site
       - name: write build version
@@ -87,6 +85,7 @@ jobs:
       # upload the built site as an artifact for the deploy step
       - uses: actions/upload-artifact@v3
         with:
+          name: site-artifact
           path: ./public
 
   # deploy to cloudflare pages
@@ -96,6 +95,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: site-artifact
+          path: ./public
+
       # deploy the site to cloudflare pages
       - name: deploy
         id: deployment
@@ -103,8 +107,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          wranglerVersion: '3.4.0'
-          command: pages publish public/ --project-name=blog-birki-io --branch=main
+          wranglerVersion: '3.5.0'
+          command: pages deploy public/ --project-name=blog-birki-io --branch=main
 
   # update the deployment result - manually complete the deployment that was created by the branch-deploy action
   result:

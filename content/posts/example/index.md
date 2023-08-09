@@ -3,7 +3,7 @@ title: "Example"
 author: "Hugo Authors"
 description: "This is an example post containing full markdown syntax"
 date: 2000-01-01T00:00:00-00:00
-draft: true
+draft: false
 
 tags: ["markdown", "css", "html", "themes"]
 categories: ["themes", "syntax"]
