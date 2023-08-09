@@ -182,12 +182,15 @@ menu:
     - name: Search 🔍
       url: search
       weight: 5
+    - name: About 💡
+      url: about
+      weight: 10
     - name: Archive 📚
       url: archives
-      weight: 10
+      weight: 15
     - name: Tags 🏷️
       url: tags
-      weight: 15
+      weight: 20
     - name: Categories 📂
       url: categories
-      weight: 20
+      weight: 25
