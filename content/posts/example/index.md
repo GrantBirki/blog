@@ -7,7 +7,7 @@ draft: false
 
 tags: ["markdown", "css", "html", "themes"]
 categories: ["themes", "syntax"]
-aliases: ["migrate-from-jekyl"] # redirect, alias, shorthand url
+aliases: ["markdown-example"] # redirect, alias, shorthand url
 ShowToc: true
 TocOpen: true
 searchHidden: false
