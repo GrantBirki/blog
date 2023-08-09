@@ -26,7 +26,7 @@ cover:
 
 # lower weight = higher precedence - 0 is interpreted as an unset weight
 weight: 0
-draft: false
+draft: true
 ---
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
