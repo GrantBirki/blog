@@ -10,6 +10,8 @@ enableEmoji: true
 enableRobotsTXT: true
 enableInlineShortcodes: true
 
+enableGitInfo: true
+
 buildDrafts: false
 buildFuture: false
 buildExpired: false
