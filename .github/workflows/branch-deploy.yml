@@ -87,6 +87,7 @@ jobs:
       # upload the built site as an artifact for the deploy step
       - uses: actions/upload-artifact@v3
         with:
+          name: site-artifact
           path: ./public
 
   # deploy to cloudflare pages
@@ -96,6 +97,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: site-artifact
+          path: ./public
+
       # deploy the site to cloudflare pages
       - name: deploy
         id: deployment
