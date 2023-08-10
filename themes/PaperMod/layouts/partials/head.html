@@ -1,3 +1,14 @@
+{{- if site.Params.analytics.google.ga4Tag }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.analytics.google.ga4Tag }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ site.Params.analytics.google.ga4Tag }}');
+</script>
+{{- end }}
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
