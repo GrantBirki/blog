@@ -18,11 +18,11 @@ TocOpen: true # auto open table of contents
 searchHidden: false # hide from search
 
 # blog post cover image
-cover:
-  image: "cover.jpg" # the image name MUST ALWAYS be cover.[extension]
-  alt: "example"
-  caption: "example" # optional caption text
-  relative: true
+# cover:
+#   image: "cover.jpg" # the image name MUST ALWAYS be cover.[extension]
+#   alt: "example"
+#   caption: "example" # optional caption text
+#   relative: true
 
 # lower weight = higher precedence - 0 is interpreted as an unset weight
 weight: 0
