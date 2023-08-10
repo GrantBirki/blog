@@ -141,6 +141,17 @@ Here is a list of links that will help you implement branch deployments in your 
 - [github/branch-deploy](https://github.com/github/branch-deploy) - A single GitHub Action that you can integrate into **any** repository to enable branch deployments
 - [Enabling branch deployments through IssueOps with GitHub Actions](https://github.blog/2023-02-02-enabling-branch-deployments-through-issueops-with-github-actions/) - A blog post I wrote at GitHub about using IssueOps + Branch Deployments to leverage branch deployments
 
+### Live Examples
+
+Here are some live examples of branch deployments in action:
+
+- [**This Blog!**](https://github.com/GrantBirki/blog/blob/6f951a51cf7519509b3025d439c3676c610babe7/.github/workflows/branch-deploy.yml) - That's right! The very text you are reading on this page was branch deployed using [github/branch-deploy](https://github.com/github/branch-deploy) and GitHub Actions
+- [github/entitlements-config](https://github.com/github/entitlements-config/blob/076a1f0f9e8cc1f5acb8a0b8e133b0a1300c8191/.github/workflows/branch-deploy.yml)
+- [the-hideout/tarkov-api](https://github.com/the-hideout/tarkov-api/blob/be645d7750a0e440794229ce56aefeb4648b8892/.github/workflows/branch-deploy.yml) - A cloudflare workers example
+- [the-hideout/cloudflare](https://github.com/the-hideout/cloudflare/blob/f3b189b54f278d7e7844e5cc2fcdbb6f5afd3467/.github/workflows/branch-deploy.yml) - A Terraform example
+
+> For even more examples, check out the [github/branch-deploy documentation](https://github.com/github/branch-deploy/blob/d92479fbe9aa72262794c67fae581cf2c287eeac/docs/examples.md)
+
 ## Conclusion 🏁
 
 If you are looking to enhance your DevOps experience, have better reliability in your deployments, or ship changes faster, then branch deployments are for you!
