@@ -151,8 +151,9 @@ Whether you are a solo developer, a startup, or a massive enterprise, branch dep
 
 ## References 📚
 
-- [Medium](https://medium.com/better-programming/branch-deployments-with-issueops-and-github-actions-d9405311ad8b) - My original article on Medium
 - [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow)
 - [GitHub Blog Post](https://github.blog/2023-02-02-enabling-branch-deployments-through-issueops-with-github-actions/)
 - [Deploying branches to GitHub.com](https://github.blog/2015-06-02-deploying-branches-to-github-com/)
 - [Deploying at GitHub](https://github.blog/2012-08-29-deploying-at-github/)
+- [Deployments from Branches](https://confluence.atlassian.com/bamboo/deployments-from-branches-407724097.html)
+- [Medium](https://medium.com/better-programming/branch-deployments-with-issueops-and-github-actions-d9405311ad8b) - My original article on Medium
