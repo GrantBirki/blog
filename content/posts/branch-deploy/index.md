@@ -132,8 +132,27 @@ Branch deployments allow you to do the following:
 - Deploy your changes to production **before** merging
 - Alternatively deploy changes to a staging, QA, or non-production environment
 
+## Implementing Branch Deployments 🛠️
+
+By taking the concepts learned in this post, you can implement branch deployments in pretty much any way you want. You can build solutions from scratch or use existing projects / tools to help you along.
+
+Here is a list of links that will help you implement branch deployments in your own projects and take your deployments to the stars:
+
+- [github/branch-deploy](https://github.com/github/branch-deploy) - A single GitHub Action that you can integrate into **any** repository to enable branch deployments
+- [Enabling branch deployments through IssueOps with GitHub Actions](https://github.blog/2023-02-02-enabling-branch-deployments-through-issueops-with-github-actions/) - A blog post I wrote at GitHub about using IssueOps + Branch Deployments to leverage branch deployments
+
 ## Conclusion
 
 If you are looking to enhance your DevOps experience, have better reliability in your deployments, or ship changes faster, then branch deployments are for you!
 
 Whether you are a solo developer, a startup, or a massive enterprise, branch deployments are a truly battle tested way to confidently ship your code to production.
+
+---
+
+## References 📚
+
+- [Medium](https://medium.com/better-programming/branch-deployments-with-issueops-and-github-actions-d9405311ad8b) - My original article on Medium
+- [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow)
+- [GitHub Blog Post](https://github.blog/2023-02-02-enabling-branch-deployments-through-issueops-with-github-actions/)
+- [Deploying branches to GitHub.com](https://github.blog/2015-06-02-deploying-branches-to-github-com/)
+- [Deploying at GitHub](https://github.blog/2012-08-29-deploying-at-github/)
