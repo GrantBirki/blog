@@ -14,7 +14,7 @@ tags: ["GitHub Actions", "deployment", "automation"] # micro level categories
 # aliases: ["markdown-example"] # redirect, alias, shorthand url
 
 ShowToc: true # show table of contents
-TocOpen: true # auto open table of contents
+TocOpen: false # auto open table of contents
 searchHidden: false # hide from search
 
 # blog post cover image
