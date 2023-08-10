@@ -1,15 +1,15 @@
 ---
-title: "Branch Deploy"
+title: "Using GitHub Actions + IssueOps to ship code with the branch deploy model"
 author: "Grant Birkinbine" # can be an array or just a string
-description: "This is an example blog post containing full markdown syntax and usage"
+description: "Enabling branch deployments through IssueOps with GitHub Actions"
 
 # The summary is for search engines
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+summary: Enabling branch deployments through IssueOps with GitHub Actions - Understanding how to use the branch deploy model to ship code safely and quickly to production.
 
-date: 2000-01-01T00:00:00-00:00 # date of creation
+date: 2023-08-10T00:00:00-00:00 # date of creation
 
-tags: ["markdown", "css", "html", "themes"]
-categories: ["themes", "syntax"]
+categories: ["engineering", "open source", "devops"] # high level categories
+tags: ["GitHub Actions", "deployment", "automation"] # micro level categories
 
 # aliases: ["markdown-example"] # redirect, alias, shorthand url
 
