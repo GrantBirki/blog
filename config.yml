@@ -150,8 +150,8 @@ params:
 
   analytics:
     google:
-      # SiteVerificationTag: "G-MBG70DMDQJ"
-      ga4Tag: "G-MBG70DMDQJ"
+      # SiteVerificationTag: "xyz"
+      ga4Tag: "G-MBG70DMDQJ" # aka measurementId
 
   assets:
     disableHLJS: true
