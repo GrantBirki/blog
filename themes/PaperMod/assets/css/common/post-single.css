@@ -313,7 +313,6 @@
 
 .post-categories a {
     border-radius: var(--radius);
-    background: var(--code-bg);
     border: 1px solid var(--border);
     display: block;
     padding-inline-start: 14px;
@@ -321,8 +320,12 @@
     margin-inline-end: 5px;
     color: var(--secondary);
     font-size: 14px;
+    font-weight: 500;
     line-height: 34px;
-    background: var(--code-bg);
+    background: linear-gradient(to right, #007FEF, #00DDD8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* background: var(--code-bg); */
 }
 
 .post-tags li {
