@@ -148,9 +148,10 @@ params:
   #     icon: icon.png
   #     iconHeight: 35
 
-  # analytics:
-  #     google:
-  #         SiteVerificationTag: "XYZabc"
+  analytics:
+    google:
+      # SiteVerificationTag: "G-MBG70DMDQJ"
+      ga4Tag: "G-MBG70DMDQJ"
 
   assets:
     disableHLJS: true
