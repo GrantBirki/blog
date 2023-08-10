@@ -70,6 +70,8 @@ For both Open Graph and Twitter Cards to work correctly you **must** include the
 - `cover.caption` - the caption used in open graph
 - `relative` - this is also required for open graph and Twitter Cards to work correctly. Since we use [page bundles](https://gohugo.io/content-management/page-bundles/), we need to set this to `true` every time
 
+Open Graph images should be `1200x630px`. You can use the [og-playground](https://og-playground.vercel.app/) by Vercel to generate images ([source code](https://github.com/vercel/og-image))
+
 ## Theme 🎨
 
 This site uses the [hugo-PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme
