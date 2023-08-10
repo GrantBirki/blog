@@ -141,7 +141,7 @@ Here is a list of links that will help you implement branch deployments in your 
 - [github/branch-deploy](https://github.com/github/branch-deploy) - A single GitHub Action that you can integrate into **any** repository to enable branch deployments
 - [Enabling branch deployments through IssueOps with GitHub Actions](https://github.blog/2023-02-02-enabling-branch-deployments-through-issueops-with-github-actions/) - A blog post I wrote at GitHub about using IssueOps + Branch Deployments to leverage branch deployments
 
-## Conclusion
+## Conclusion 🏁
 
 If you are looking to enhance your DevOps experience, have better reliability in your deployments, or ship changes faster, then branch deployments are for you!
 
