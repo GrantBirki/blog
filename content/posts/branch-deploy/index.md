@@ -8,7 +8,17 @@ summary: "Learn how to use the branch deploy model to ship code safely and quick
 
 date: 2023-08-10T00:00:00-00:00 # date of creation
 
-categories: ["engineering", "open source", "devops"] # high level categories
+# high level categories
+categories:
+  - name: "engineering"
+    gradient-start: "#4bb4e3"
+    gradient-end: "#2b94c3"
+  - name: "open source"
+    gradient-start: "#f46b45"
+    gradient-end: "#eea849"
+  - name: "devops"
+    gradient-start: "#f46b45"
+    gradient-end: "#eea849"
 tags: ["GitHub Actions", "deployment", "automation"] # micro level categories
 
 # aliases: ["markdown-example"] # redirect, alias, shorthand url
