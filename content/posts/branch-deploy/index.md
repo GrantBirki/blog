@@ -19,7 +19,7 @@ searchHidden: false # hide from search
 
 # blog post cover image
 cover:
-  image: "cover.svg" # the image name MUST ALWAYS be cover.[extension]
+  image: "cover.png" # the image name MUST ALWAYS be cover.[extension]
   alt: "develop, deploy, merge"
 #   caption: "example" # optional caption text
   relative: true
