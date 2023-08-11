@@ -322,7 +322,7 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 34px;
-    background: linear-gradient(to right, #007FEF, #00DDD8);
+    background: linear-gradient(to right, var(--default-gradient-start), var(--default-gradient-end));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     /* background: var(--code-bg); */
