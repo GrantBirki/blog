@@ -23,9 +23,6 @@ categoryColors:
     gradientStart: "#FF524C"
     gradientEnd: "#F9C52A"
 
-banner:
-  headline: Try Tower For Free!
-
 ShowToc: true # show table of contents
 TocOpen: false # auto open table of contents
 searchHidden: false # hide from search
