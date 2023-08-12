@@ -12,13 +12,13 @@ tags: ["markdown", "css", "html", "themes"] # micro level categories
 aliases: ["markdown-example"] # redirect, alias, shorthand url
 
 categories: ["themes", "syntax"] # high level categories
-category-colors:
-  - name: "themes"
-    gradient-start: "#4bb4e3"
-    gradient-end: "#2b94c3"
-  - name: "syntax"
-    gradient-start: "#f46b45"
-    gradient-end: "#eea849"
+categoryColors:
+  themes:
+    gradientStart: "#007FEE"
+    gradientEnd: "#00DBD8"
+  syntax:
+    gradientStart: "#7E25C7"
+    gradientEnd: "#F90183"
 
 ShowToc: true # show table of contents
 TocOpen: true # auto open table of contents

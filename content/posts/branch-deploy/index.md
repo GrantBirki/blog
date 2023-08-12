@@ -12,16 +12,19 @@ tags: ["GitHub Actions", "deployment", "automation"] # micro level categories
 # aliases: ["markdown-example"] # redirect, alias, shorthand url
 
 categories: ["engineering", "open source", "devops"] # high level categories
-category-colors:
-  - name: "engineering"
-    gradient-start: "#4bb4e3"
-    gradient-end: "#2b94c3"
-  - name: "open source"
-    gradient-start: "#f46b45"
-    gradient-end: "#eea849"
-  - name: "devops"
-    gradient-start: "#f46b45"
-    gradient-end: "#eea849"
+categoryColors:
+  engineering:
+    gradientStart: "#007FEE"
+    gradientEnd: "#00DBD8"
+  open source:
+    gradientStart: "#7E25C7"
+    gradientEnd: "#F90183"
+  devops:
+    gradientStart: "#FF524C"
+    gradientEnd: "#F9C52A"
+
+banner:
+  headline: Try Tower For Free!
 
 ShowToc: true # show table of contents
 TocOpen: false # auto open table of contents
