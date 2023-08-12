@@ -18,14 +18,7 @@
       {{- partial "translation_list.html" . -}}
       {{- partial "edit_post.html" . -}}
       {{- partial "post_canonical.html" . -}}
-    </div>
-    {{- $categories := .Language.Params.Taxonomies.category | default "categories" }}
-    <div class="post-cat-div">
-      <ul class="post-categories">
-        {{- range ($.GetTerms $categories) }}
-        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-        {{- end }}
-      </ul>
+      {{- partial "category_tags.html" . -}}
     </div>
     {{- end }}
   </header>

@@ -8,10 +8,17 @@ summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit
 
 date: 2000-01-01T00:00:00-00:00 # date of creation
 
-categories: ["themes", "syntax"] # high level categories
 tags: ["markdown", "css", "html", "themes"] # micro level categories
-
 aliases: ["markdown-example"] # redirect, alias, shorthand url
+
+categories: ["themes", "syntax"] # high level categories
+categoryColors:
+  themes:
+    gradientStart: "#007FEE"
+    gradientEnd: "#00DBD8"
+  syntax:
+    gradientStart: "#7E25C7"
+    gradientEnd: "#F90183"
 
 ShowToc: true # show table of contents
 TocOpen: true # auto open table of contents

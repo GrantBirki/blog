@@ -8,10 +8,23 @@ summary: "Learn how to use the branch deploy model to ship code safely and quick
 
 date: 2023-08-10T00:00:00-00:00 # date of creation
 
-categories: ["engineering", "open source", "devops"] # high level categories
 tags: ["GitHub Actions", "deployment", "automation"] # micro level categories
-
 # aliases: ["markdown-example"] # redirect, alias, shorthand url
+
+categories: ["engineering", "open source", "devops"] # high level categories
+categoryColors:
+  engineering:
+    gradientStart: "#007FEE"
+    gradientEnd: "#00DBD8"
+  open source:
+    gradientStart: "#7E25C7"
+    gradientEnd: "#F90183"
+  devops:
+    gradientStart: "#FF524C"
+    gradientEnd: "#F9C52A"
+
+banner:
+  headline: Try Tower For Free!
 
 ShowToc: true # show table of contents
 TocOpen: false # auto open table of contents
