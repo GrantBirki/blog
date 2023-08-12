@@ -172,6 +172,9 @@ permissions:
   contents: write
   checks: read
 
+# The job that runs 'branch-deploy' logic
+# This run runs on PR comments, looks for `.deploy` in said PR comment...
+# ... and then executes your own custom deployment logic if the command is found
 jobs:
   demo:
     if: ${{ github.event.issue.pull_request }} # only run on pull request comments
