@@ -75,15 +75,20 @@
 
 .post-content a:hover,
 .toc a:hover {
-    box-shadow: 0 1px 0;
+    /* box-shadow: 0 1px 0; */
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
+    text-decoration: underline;
 }
 
 .post-content a code {
     margin: auto 0;
-    border-radius: 0;
-    box-shadow: 0 -1px 0 var(--primary) inset;
+    /* border-radius: 0; */
+    /* box-shadow: 0 -1px 0 var(--primary) inset; */
+}
+
+.post-content a:hover code {
+    text-decoration: underline;
 }
 
 .post-content del {
@@ -196,11 +201,12 @@
 
 .post-content code {
     margin: auto 4px;
-    padding: 4px 6px;
-    font-size: 0.78em;
+    padding: 0.2em 0.4em;
+    font-size: 85%;
     line-height: 1.5;
     background: var(--code-bg);
-    border-radius: 2px;
+    border-radius: 6px;
+    font-family: menlo, Consolas, ui-monospace, monospace;
 }
 
 .post-content pre code {
