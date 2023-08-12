@@ -18,20 +18,7 @@
       {{- partial "translation_list.html" . -}}
       {{- partial "edit_post.html" . -}}
       {{- partial "post_canonical.html" . -}}
-    </div>
-    {{- $categories := .Language.Params.Taxonomies.category | default "categories" }}
-    {{ $categoryColors := .Params.categoryColors }}
-    <div class="post-cat-div">
-      <ul class="post-categories">
-        {{- range ($.GetTerms $categories) }}
-        {{- if $categoryColors }}
-        {{- $color := index $categoryColors .LinkTitle }}
-        <li><a style="background: linear-gradient(to right, {{ $color.gradientStart }}, {{ $color.gradientEnd }}); -webkit-background-clip: text" href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-        {{- else }}
-        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-        {{- end }}
-        {{- end }}
-      </ul>
+      {{- partial "category_tags.html" . -}}
     </div>
     {{- end }}
   </header>
