@@ -75,15 +75,20 @@
 
 .post-content a:hover,
 .toc a:hover {
-    box-shadow: 0 1px 0;
+    /* box-shadow: 0 1px 0; */
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
+    text-decoration: underline;
 }
 
 .post-content a code {
     margin: auto 0;
-    border-radius: 0;
-    box-shadow: 0 -1px 0 var(--primary) inset;
+    /* border-radius: 0; */
+    /* box-shadow: 0 -1px 0 var(--primary) inset; */
+}
+
+.post-content a:hover code {
+    text-decoration: underline;
 }
 
 .post-content del {

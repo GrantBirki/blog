@@ -150,7 +150,7 @@ By taking the concepts learned in this post, you can implement branch deployment
 
 Here is a list of links that will help you implement branch deployments in your own projects and take your deployments to the stars:
 
-- [github/branch-deploy](https://github.com/github/branch-deploy) - A single open source GitHub Action that you can integrate into **any** repository to enable branch deployments
+- [`github/branch-deploy`](https://github.com/github/branch-deploy) - A single open source GitHub Action that you can integrate into **any** repository to enable branch deployments
 - [Enabling branch deployments through IssueOps with GitHub Actions](https://github.blog/2023-02-02-enabling-branch-deployments-through-issueops-with-github-actions/) - A blog post I wrote at GitHub about using IssueOps + Branch Deployments to leverage branch deployments
 
 The [github/branch-deploy](https://github.com/github/branch-deploy) Action was designed to specifically help folks implement branch deployments in their projects. Whether you are a solo developer, a startup, or a massive enterprise, you can leverage the _branch-deploy Action_ to enable branch deployments in your projects. The best part is that this project is open source, and highly customizable to fit your needs.
