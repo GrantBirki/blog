@@ -8,10 +8,7 @@ summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit
 
 date: 2000-01-01T00:00:00-00:00 # date of creation
 
-# high level categories
-categories:
-  - name: themes
-  - name: syntax
+categories: ["themes", "syntax"] # high level categories
 tags: ["markdown", "css", "html", "themes"] # micro level categories
 
 aliases: ["markdown-example"] # redirect, alias, shorthand url
