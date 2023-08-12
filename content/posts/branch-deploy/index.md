@@ -200,6 +200,10 @@ jobs:
         run: echo "Add your own deployment logic in here, it could be anything you want!"
 ```
 
+After setting up this GitHub Action in your project, you can invoke branch deployments via [IssueOps](https://github.com/github/branch-deploy/tree/d92479fbe9aa72262794c67fae581cf2c287eeac#issueops-%EF%B8%8F) commands as demonstrated in the demo video below:
+
+{{< video src="branch-deploy-demo" >}}
+
 ### Live Examples
 
 Here are some live examples of branch deployments in action:
