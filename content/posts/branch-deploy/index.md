@@ -47,6 +47,8 @@ The most common way developers deploy their changes to production is the merge �
 
 > If you have already heard of the branch deploy model and are familiar with it, you can skip ahead to get to the part where we implement it with GitHub Actions and IssueOps for a project
 
+This article will go into **what** the branch deploy model is, **how** it works, and provide some resources to help you implement it in your own projects using **open source utilities**.
+
 ## Models 🏗️
 
 In this section, we will discuss the two most common ways developers deploy their changes to production:
@@ -148,8 +150,52 @@ By taking the concepts learned in this post, you can implement branch deployment
 
 Here is a list of links that will help you implement branch deployments in your own projects and take your deployments to the stars:
 
-- [github/branch-deploy](https://github.com/github/branch-deploy) - A single GitHub Action that you can integrate into **any** repository to enable branch deployments
+- [github/branch-deploy](https://github.com/github/branch-deploy) - A single open source GitHub Action that you can integrate into **any** repository to enable branch deployments
 - [Enabling branch deployments through IssueOps with GitHub Actions](https://github.blog/2023-02-02-enabling-branch-deployments-through-issueops-with-github-actions/) - A blog post I wrote at GitHub about using IssueOps + Branch Deployments to leverage branch deployments
+
+The [github/branch-deploy](https://github.com/github/branch-deploy) Action was designed to specifically help folks implement branch deployments in their projects. Whether you are a solo developer, a startup, or a massive enterprise, you can leverage the _branch-deploy Action_ to enable branch deployments in your projects. The best part is that this project is open source, and highly customizable to fit your needs.
+
+This article won't go into too many details as the [official documentation](https://github.com/github/branch-deploy) is quite robust. Here is a quick example setting up the `github/branch-deploy` Action in your project to enable branch deployments via pull request comments:
+
+```yaml
+name: "branch deploy demo"
+
+# The workflow to execute on is comments that are newly created
+on:
+  issue_comment:
+    types: [created]
+
+# Permissions needed for reacting and adding comments for IssueOps commands
+permissions:
+  pull-requests: write
+  deployments: write
+  contents: write
+  checks: read
+
+jobs:
+  demo:
+    if: ${{ github.event.issue.pull_request }} # only run on pull request comments
+    runs-on: ubuntu-latest
+    steps:
+      # Execute IssueOps branch deployment logic, hooray!
+      # This will be used to "gate" all future steps below and conditionally trigger steps/deployments
+      - uses: github/branch-deploy@vX.X.X
+        id: branch-deploy
+        with:
+          trigger: ".deploy" # the command to trigger a branch deployment
+
+      # Run your deployment logic for your project here - examples seen below
+
+      # Checkout your projects repository based on the ref provided by the branch-deploy step
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ steps.branch-deploy.outputs.ref }}
+
+      # Your own deployment logic goes here - it can be anything you want
+      - name: fake regular deploy
+        if: ${{ steps.branch-deploy.outputs.continue == 'true' }}
+        run: echo "Add your own deployment logic in here, it could be anything you want!"
+```
 
 ### Live Examples
 
