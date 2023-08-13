@@ -1,5 +1,5 @@
 ---
-title: The History of x.com
+title: The History of 𝕏.com
 author: Grant Birkinbine # can be an array or just a string
 description: The unique history of x.com and the many sites that have occupied its space
 
@@ -35,7 +35,7 @@ draft: false
 
 ## Intro 💡
 
-It has been impossible to avoid all the chaos surrounding Twitter over the last year. From the acquisition of the company by an eccentric billionaire, to mass layoffs, to re-branding the entire company to the letter "X"... it has been a wild ride for the social media giant that once was a little blue bird.
+It has been impossible to avoid all the chaos surrounding Twitter over the last year. From the acquisition of the company by an eccentric billionaire, to mass layoffs, to re-branding the entire company to the letter "𝕏"... it has been a wild ride for the social media giant that once was a little blue bird.
 
 When I first heard that [Elon Musk](https://en.wikipedia.org/wiki/Elon_Musk) had decided to re-brand Twitter to "X", I thought it was purely a joke but a notification from the [New York Times](https://www.nytimes.com/2023/07/24/technology/twitter-x-elon-musk.html?smid=url-share) on my phone proved otherwise.
 
@@ -53,43 +53,113 @@ The majority of screenshots and source information in the rest of this article c
 
 ---
 
+## The History of x.com 📜
+
+Jumping right into the history of x.com, we can see that it was first archived in 1996. Let's walk through the wild history of this domain to see all the different sites that have occupied its space.
+
+### 1996 📆
+
+⭐ **x.com is a personal site**
+
+The very first archived version of x.com shows that it was possibly owned by someone named "Dave" and that it was under construction.
+
 ![x.com in 1996](1996.png)
 
 > x.com in 1996 - [source](https://web.archive.org/web/19961219022100/http://x.com/)
+
+### 1997 📆
+
+In 1997, it looks like x.com was still under the ownership of "Dave" but this year he added a third color to the site... green! It also features a red sphere featuring the `x.com` domain. "Dave" was probably quite aware at the time just how unique the domain name was to own and likely had no idea that his page would be archived for the next 27 years and one day be the home of Twitter.
 
 ![x.com in 1997](cover.png)
 
 > x.com in 1997 - [source](https://web.archive.org/web/19970411224438/http://x.com/)
 
+### 1998 📆
+
+At this point, a new owner is using x.com as their personal site. Perhaps "Dave" and "Rob" were friends since "Dave" was mentioned in the previous version of the site. Either way, "Rob" is now the owner of `x.com` and quite possibly got a nice payout for being able to sell the valuable domain name in the following year.
+
 ![x.com in 1998](1998.png)
 
 > x.com in 1998 - [source](https://web.archive.org/web/19981205063857/http://www.x.com/)
+
+### 1999 📆
+
+⭐ **x.com is an online banking service**
+
+In 1999, an online bank by the name of **x.com** was founded by Elon Musk, Harris Fricker, Christopher Payne, and Ed Ho in Palo Alto, California<cite>[^2]</cite>. The bank needed a domain name so Elon Musk allegedly paid $1 million to purchase the domain name (presumably from "Rob")<cite>[^3]</cite>.
+
+During 1999, the site displays an "Under Construction" message without any details.
+
+[^2]: X.com "bank" - [Wikipedia](https://en.wikipedia.org/wiki/X.com_(bank))
+  
+[^3]: Elon Musk's $1 million purchase of x.com - [Fortune.com](https://fortune.com/2023/07/26/elon-musk-second-try-twitter-x-dot-com-paypal/)
 
 ![x.com in 1999](1999.png)
 
 > x.com in 1999 - [source](https://web.archive.org/web/19990429170509/http://www.x.com/)
 
+### Early 2000 📆
+
+x.com was up and running in the beginning half of 2000. Navigating to x.com, users would be presented with a login/sign-up screen that sharply aligns with the design trends of the dotcom bubble era. Looking over on the right side of the page, you can see a bit of foreshadowing for the future of x.com... PayPal.
+
 ![x.com in early 2000](2000.png)
 
 > x.com in early 2000 - [source](https://web.archive.org/web/20000301000000*/http://www.x.com/)
+
+### Late 2000 📆
+
+⭐ **x.com is PayPal**
+
+In the latter half of 2000, x.com and Confinity merged together to form PayPal and so x.com became PayPal<cite>[^2]</cite>.
 
 ![x.com in late 2000](2000-2.png)
 
 > x.com in late 2000 - [source](https://web.archive.org/web/20001019043926/http://www.x.com/)
 
+### 2012 📆
+
+⭐ **x.com is landing page for eBay and PayPal products**
+
+> PayPal is acquired by eBay in 2002
+
+Flash forward to the year 2012 and x.com is now a landing page for eBay and PayPal products. eBay acquired PayPal in 2002 and between 2002 and 2012, x.com was mainly used as a fancy link to promote various services.
+
 ![x.com in 2012](2012.png)
 
 > x.com in 2012 - [source](https://web.archive.org/web/20120629033626/https://www.x.com/)
 
-For a while, x.com just redirects to ebayinc.com
+### 2017 📆
+
+⭐ **x.com is a blank site with the letter "x"**
+
+Between 2012 and 2017, x.com just redirects to ebayinc.com. This all ended when Elon Musk decided to purchase the domain name back from PayPal/eBay because "it has great sentimental value"<cite>[^2]</cite>.
+
+x.com stays in this state for nearly all of its time until 2023, with just a short break in 2018.
 
 ![x.com in 2017](2017.png)
 
 > x.com in 2017 - [source](https://web.archive.org/web/20170731220848/http://x.com/)
 
+### 2018 📆
+
+⭐ **x.com is used to promote hat sales**
+
+For a brief period of time in 2018, x.com was used to promote hat sales for [The Boring Company](https://en.wikipedia.org/wiki/The_Boring_Company)<cite>[^4]</cite> by redirecting to the `boringcompany.com/hat` page (done by Elon Musk, the owner of the domain).
+
+[^4]: The Boring Company - [Wikipedia](https://en.wikipedia.org/wiki/The_Boring_Company)
+
 ![x.com in 2018](2018.png)
 
 > x.com in 2018 - [source](https://web.archive.org/web/20180228174126/http://x.com/) - [redirect to hat sale](https://web.archive.org/web/20180428210848/https://www.boringcompany.com/hat)
+
+### 2023 📆
+
+⭐ **𝕏.com is Twitter** (well, almost)
+
+As of August 1st, 2023, x.com is now redirecting to Twitter as part of their re-branding effort to the letter "𝕏"<cite>[^2]</cite>.
+
+In the near future, this will likely "flip around" and `x.com` will be the main domain for Twitter while `twitter.com` will redirect to `x.com`.
 
 ![x.com in 2023](2023.png)
 
