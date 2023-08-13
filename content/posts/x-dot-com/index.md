@@ -1,13 +1,12 @@
 ---
-title: The Wild History of x.com
+title: The History of x.com
 author: Grant Birkinbine # can be an array or just a string
-description: todo
+description: The unique history of x.com and the many sites that have occupied its space
 
 # The summary is for search engines
-summary: todo
+summary: The unique history of x.com and the many sites that have occupied its space
 
-date: 2023-08-11T00:00:00-00:00 # date of creation
-updateDate: 2023-08-12T00:00:00-00:00 # date of last update
+date: 2023-08-13T00:00:00-00:00 # date of creation
 
 tags: ["curiosity", "technology"] # micro level categories
 aliases: ["x"] # redirect, alias, shorthand url
