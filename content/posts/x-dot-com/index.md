@@ -169,7 +169,9 @@ In the near future, this will likely "flip around" and `x.com` will be the main 
 
 When thinking about how a "domain" can be the home to many different sites, projects, and companies, I keep thinking about how this is similar to the way humans occupy buildings in different ways over time. Only about a mile walk from me (writing this in London) is the Battersea Power Station. This is a perfect [IRL](https://en.wikipedia.org/wiki/Real_life#:~:text=The%20initialism%20%22RL%22%20stands%20for,due%20to%20%22RL%20problems%22.) (real-life) example of how a place can serve so many different purposes over the years.
 
-Battery Power Station was built in the 1930s and at its peak, it was producing a fifth of London’s power<cite>[^5]</cite>. It was decommissioned in 1983 and has since been used as a filming location for many movies and TV shows. It has now been completely redeveloped to be a mixed-use development containing apartments, cafes, restaurants, tons of shops, and even a hotel.
+Battersea Power Station was built in the 1930s and at its peak, it was producing a fifth of London’s power<cite>[^5]</cite>. It was decommissioned in 1983 and has since been used as a filming location for many movies and TV shows. It has now been completely redeveloped to be a mixed-use development containing apartments, cafes, restaurants, tons of shops, and even a hotel.
+
+![Battersea Power Station](battersea.jpg)
 
 [^5]: Battersea Power Station - [Official Site](https://batterseapowerstation.co.uk/about/heritage-history/)
 
