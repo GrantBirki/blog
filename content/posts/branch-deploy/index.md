@@ -35,7 +35,7 @@ cover:
   relative: true
 
 # lower weight = higher precedence - 0 is interpreted as an unset weight
-weight: 0
+weight: 1
 draft: false
 ---
 
