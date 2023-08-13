@@ -41,6 +41,18 @@ When I first heard that [Elon Musk](https://en.wikipedia.org/wiki/Elon_Musk) had
 
 The very first thought that came to my mind was "_How on Earth are they ever going to acquire the x.com domain?_". Surely this single letter domain is either already owned by another tech giant or restricted by the [Internet Corporation for Assigned Names and Numbers](https://en.wikipedia.org/wiki/ICANN), right? Well, navigating to [x.com](https://x.com) will show you that it is currently redirecting to Twitter (as of August 13th, 2023). This is where my adventure down the x.com rabbit hole began. 🐰
 
+---
+
+The majority of screenshots and source information in the rest of this article comes from the [Internet Archive](https://web.archive.org/)'s WayBack Machine. The Internet Archive is a non-profit organization that has been archiving the internet since 1996. It is a great resource for looking at the history of websites and how they have changed over time.
+
+> _The Internet Archive is an American digital library founded on May 10, 1996, and chaired by free information advocate Brewster Kahle. It provides free access to collections of digitized materials like websites, software applications, music, audiovisual and print materials._
+>
+> — <cite>Wikipedia[^1]</cite>
+
+[^1]: The above quote is excerpted from Wikipedia's article on the [Internet Archive](https://en.wikipedia.org/wiki/Internet_Archive)
+
+---
+
 ![x.com in 1996](1996.png)
 
 > x.com in 1996 - [source](https://web.archive.org/web/19961219022100/http://x.com/)
