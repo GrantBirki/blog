@@ -33,6 +33,13 @@ weight: 0
 draft: false
 ---
 
+## Intro 💡
+
+It has been impossible to avoid all the chaos surrounding Twitter over the last year. From the acquisition of the company by an eccentric billionaire, to mass layoffs, to re-branding the entire company to the letter "X"... it has been a wild ride for the social media giant that once was a little blue bird.
+
+When I first heard that [Elon Musk](https://en.wikipedia.org/wiki/Elon_Musk) had decided to re-brand Twitter to "X", I thought it was purely a joke but a notification from the [New York Times](https://www.nytimes.com/2023/07/24/technology/twitter-x-elon-musk.html?smid=url-share) on my phone proved otherwise.
+
+The very first thought that came to my mind was "_How on Earth are they ever going to acquire the x.com domain?_". Surely this single letter domain is either already owned by another tech giant or restricted by the [Internet Corporation for Assigned Names and Numbers](https://en.wikipedia.org/wiki/ICANN), right? Well, navigating to [x.com](https://x.com) will show you that it is currently redirecting to Twitter (as of August 13th, 2023). This is where my adventure down the x.com rabbit hole began. 🐰
 
 ![x.com in 1996](1996.png)
 
