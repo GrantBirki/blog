@@ -91,7 +91,7 @@ jobs:
       # deploy the site to cloudflare pages
       - name: deploy
         id: deployment
-        uses: cloudflare/wrangler-action@fcf648c7895751f5c39060e286527b900ee9e396 # pin@3.1.0
+        uses: cloudflare/wrangler-action@416205365a2b35b43cc0ffa0ed1d196c7c55a7e8 # pin@3.1.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
