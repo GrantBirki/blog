@@ -36,7 +36,7 @@ jobs:
     steps:
       # https://github.com/github/branch-deploy/blob/d3c24bd92505e623615b75ffdfac5ed5259adbdb/docs/merge-commit-strategy.md
       - name: deployment check
-        uses: github/branch-deploy@v7.2.0
+        uses: github/branch-deploy@v7.4.0
         id: deployment-check
         with:
           merge_deploy_mode: "true"
@@ -91,7 +91,7 @@ jobs:
       # deploy the site to cloudflare pages
       - name: deploy
         id: deployment
-        uses: cloudflare/wrangler-action@20ea5060497220b70723b2c5fdf847822eaaa7fa # pin@3.0.0
+        uses: cloudflare/wrangler-action@fcf648c7895751f5c39060e286527b900ee9e396 # pin@3.1.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
