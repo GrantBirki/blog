@@ -37,7 +37,7 @@ draft: false
 
 ## @GrantBirki
 
-Hey its me, Grant Birkinbine 👋. On the internet I go by my handle `@GrantBirki`. I am a software engineer, security enthusiast, and love open source. This blog is mostly a collection of my thoughts, projects, and ideas around technical projects at work and in my free time. However, other stuff will be thrown in here as well.
+Hey its me, Grant Birkinbine 👋. On the internet I go by my handle `@GrantBirki`. I am a software engineer, security enthusiast, and love open source. This blog is mostly a collection of my thoughts, projects, and ideas around technical projects at work and in my free time. However, other stuff will be thrown in here as well - like sandwich recipes, and other fun stuffs.
 
 ### A bit about me
 
@@ -45,6 +45,11 @@ I grew up in the mountains of Colorado skiing, and enjoying the outdoors. When t
 
 Since my "personal degree" was really just a "Bachelors in open source" I have become extremely passionate about the open source community with technology. Nearly all of my projects are open source and I try to contribute back to the community as much as possible. I have been lucky enough to work for companies that also share this passion and have been able to contribute to open source projects as part of my day job. This is also a part of the reason why I wanted to start this blog, to share projects, and bounce ideas off of the community.
 
+Right around the time I dropped out of college (2017), I was also bitten by the travel bug, go figure... Since then, I have been traveling and backpacking all over the world and it has been an amazing experience. I journal about a good amount of my travels [here](https://journal.birki.io/) and also on [Instagram](https://www.instagram.com/grantbirki/).
+
 ### Where to find me
 
 - [GitHub](https://github.com/GrantBirki)
+- [LinkedIn](https://www.linkedin.com/in/grantbirkinbine/)
+- [Twitter / X](https://twitter.com/GrantBirki)
+- [Instagram](https://www.instagram.com/grantbirki/)
