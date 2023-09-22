@@ -40,7 +40,7 @@ jobs:
 
     steps:
       # execute the branch-deploy action
-      - uses: github/branch-deploy@v7.4.0
+      - uses: github/branch-deploy@v8.0.0
         id: branch-deploy
         with:
           trigger: ".deploy"
@@ -57,7 +57,7 @@ jobs:
     steps:
       # checkout the project's repository based on the ref provided by the branch-deploy step
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ needs.trigger.outputs.ref }}
 
@@ -103,7 +103,7 @@ jobs:
       # deploy the site to cloudflare pages
       - name: deploy
         id: deployment
-        uses: cloudflare/wrangler-action@416205365a2b35b43cc0ffa0ed1d196c7c55a7e8 # pin@3.1.0
+        uses: cloudflare/wrangler-action@20ea5060497220b70723b2c5fdf847822eaaa7fa
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
