@@ -91,9 +91,9 @@ jobs:
       # deploy the site to cloudflare pages
       - name: deploy
         id: deployment
-        uses: cloudflare/wrangler-action@20ea5060497220b70723b2c5fdf847822eaaa7fa
+        uses: cloudflare/wrangler-action@v3.1.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          wranglerVersion: '3.5.0'
+          wranglerVersion: '3.9.0'
           command: pages deploy public/ --project-name=blog-birki-io --branch=main
