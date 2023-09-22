@@ -190,7 +190,7 @@ jobs:
       # Run your deployment logic for your project here - examples seen below
 
       # Checkout your projects repository based on the ref provided by the branch-deploy step
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: ${{ steps.branch-deploy.outputs.ref }}
 
