@@ -103,11 +103,11 @@ jobs:
       # deploy the site to cloudflare pages
       - name: deploy
         id: deployment
-        uses: cloudflare/wrangler-action@20ea5060497220b70723b2c5fdf847822eaaa7fa
+        uses: cloudflare/wrangler-action@c25aadc9657b0cdc4786c04e59a6fe92765a783b # pin@v3.1.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          wranglerVersion: '3.5.0'
+          wranglerVersion: '3.9.0'
           command: pages deploy public/ --project-name=blog-birki-io --branch=main
 
   # update the deployment result - manually complete the deployment that was created by the branch-deploy action
@@ -142,7 +142,7 @@ jobs:
             repos/{owner}/{repo}/deployments/${{ needs.trigger.outputs.deployment_id }}/statuses \
             -f environment='${{ needs.trigger.outputs.environment }}' \
             -f state=${DEPLOY_STATUS}
-        
+
       # use the GitHub CLI to remove the non-sticky lock that was created by the branch-deploy action
       - name: remove a non-sticky lock
         env:
