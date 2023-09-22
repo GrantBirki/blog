@@ -53,3 +53,4 @@ Right around the time I dropped out of college (2017), I was also bitten by the 
 - [LinkedIn](https://www.linkedin.com/in/grantbirkinbine/)
 - [Twitter / X](https://twitter.com/GrantBirki)
 - [Instagram](https://www.instagram.com/grantbirki/)
+- [Medium](https://birki.medium.com/)
