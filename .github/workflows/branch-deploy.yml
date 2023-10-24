@@ -44,7 +44,7 @@ jobs:
         id: branch-deploy
         with:
           trigger: ".deploy"
-          # sticky_locks: "true"
+          sticky_locks: "true" # optional see -> https://github.com/github/branch-deploy/blob/main/docs/hubot-style-deployment-locks.md
           environment_targets: production
           skip_completing: "true" # we will complete the deployment manually in the 'result' job
           admins: "GrantBirki"
