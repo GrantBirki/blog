@@ -40,10 +40,11 @@ jobs:
 
     steps:
       # execute the branch-deploy action
-      - uses: github/branch-deploy@v8.0.0
+      - uses: github/branch-deploy@v8.1.0
         id: branch-deploy
         with:
           trigger: ".deploy"
+          # sticky_locks: "true"
           environment_targets: production
           skip_completing: "true" # we will complete the deployment manually in the 'result' job
           admins: "GrantBirki"
@@ -96,12 +97,14 @@ jobs:
 
     steps:
       - uses: actions/download-artifact@v3
+        if: ${{ needs.trigger.outputs.noop != 'true' }}
         with:
           name: site-artifact
           path: ./public
 
       # deploy the site to cloudflare pages
       - name: deploy
+        if: ${{ needs.trigger.outputs.noop != 'true' }}
         id: deployment
         uses: cloudflare/wrangler-action@c25aadc9657b0cdc4786c04e59a6fe92765a783b # pin@v3.1.0
         with:
