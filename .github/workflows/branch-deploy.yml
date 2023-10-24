@@ -155,9 +155,9 @@ jobs:
           # Fetch the lock.json file from the branch
           gh api \
             --method GET \
-            repos/{owner}/{repo}/contents/lock.json \
-            --ref ${{ needs.trigger.outputs.environment }}-branch-deploy-lock \
-            --raw-output \
+            repos/{owner}/{repo}/contents/lock.json?ref=${{ needs.trigger.outputs.environment }}-branch-deploy-lock \
+            --jq '.content' \
+            | base64 --decode
             > lock.json
           
           # Check if the sticky value is true
