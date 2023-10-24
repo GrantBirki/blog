@@ -165,6 +165,7 @@ jobs:
             echo "The lock is sticky, skipping the delete step"
           else
             # use the GitHub CLI to remove the non-sticky lock that was created by the branch-deploy action
+            echo "The lock is not sticky, deleting the lock"
             gh api \
               --method DELETE \
               repos/{owner}/{repo}/git/refs/heads/${{ needs.trigger.outputs.environment }}-branch-deploy-lock
