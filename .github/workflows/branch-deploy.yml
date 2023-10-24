@@ -157,7 +157,7 @@ jobs:
             --method GET \
             repos/{owner}/{repo}/contents/lock.json?ref=${{ needs.trigger.outputs.environment }}-branch-deploy-lock \
             --jq '.content' \
-            | base64 --decode
+            | base64 --decode \
             > lock.json
           
           # Check if the sticky value is true
@@ -170,6 +170,8 @@ jobs:
               --method DELETE \
               repos/{owner}/{repo}/git/refs/heads/${{ needs.trigger.outputs.environment }}-branch-deploy-lock
           fi
+
+          rm lock.json
 
       # remove the default 'eyes' reaction from the comment that triggered the deployment
       # this reaction is added by the branch-deploy action by default
