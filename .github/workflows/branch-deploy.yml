@@ -84,7 +84,7 @@ jobs:
         run: echo ${GITHUB_SHA} > ./public/version.txt
 
       # upload the built site as an artifact for the deploy step
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: site-artifact
           path: ./public
