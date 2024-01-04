@@ -40,7 +40,7 @@ jobs:
 
     steps:
       # execute the branch-deploy action
-      - uses: github/branch-deploy@v8.2.0
+      - uses: github/branch-deploy@v8
         id: branch-deploy
         with:
           trigger: ".deploy"
@@ -77,14 +77,14 @@ jobs:
 
       # build the site with hugo
       - name: build with hugo
-        run: hugo --gc --verbose --baseURL ${{ env.web_url }}
+        run: hugo --gc --logLevel info --baseURL ${{ env.web_url }}
 
       # this step is custom to my site and adds a 'commit' version to the site
       - name: write build version
         run: echo ${GITHUB_SHA} > ./public/version.txt
 
       # upload the built site as an artifact for the deploy step
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: site-artifact
           path: ./public
@@ -96,7 +96,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         if: ${{ needs.trigger.outputs.noop != 'true' }}
         with:
           name: site-artifact
