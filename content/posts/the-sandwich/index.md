@@ -111,3 +111,84 @@ This section will be broken down into two sections, the first is for a TL;DR (to
 5. Grill the sandwich until the bread is crispy and the cheese is melted and its super hot.
 6. Grate some more Parmigiano-Reggiano on top of the sandwich and hit it with some sea salt flakes.
 7. Eat the sandwich.
+
+### Detailed
+
+This section will go into detailed instructions (with pictures) on how to make the sandwich.
+
+#### The Bits (Step 1)
+
+First, finely chop up the red onion, shallot, and garlic cloves.
+
+![IMG_5542_LR.jpg](IMG_5542_LR.jpg)
+![IMG_5545_LR.jpg](IMG_5545_LR.jpg)
+![IMG_5548_LR.jpg](IMG_5548_LR.jpg)
+![IMG_5551_LR.jpg](IMG_5551_LR.jpg)
+
+Second, toss the bits into a pan with olive oil, salt, pepper, red pepper flakes, and Italian seasoning. Cook until well browned.
+
+![IMG_5552_LR.jpg](IMG_5552_LR.jpg)
+![IMG_5554_LR.jpg](IMG_5554_LR.jpg)
+![IMG_5555_LR.jpg](IMG_5555_LR.jpg)
+![IMG_5560_LR.jpg](IMG_5560_LR.jpg)
+![IMG_5562_LR.jpg](IMG_5562_LR.jpg)
+
+#### The Spread (Step 2)
+
+First, drain the roasted red peppers.
+
+Then, put the pistachios, garlic cloves, olive oil, salt, fresh basil leaves, Parmigiano-Reggiano cheese, and roasted red peppers into a food processor.
+
+![IMG_5544_LR.jpg](IMG_5544_LR.jpg)
+![IMG_5577_LR.jpg](IMG_5577_LR.jpg)
+
+Blend until smooth. Set it next to your bread for a cool photo.
+
+![IMG_5582_LR.jpg](IMG_5582_LR.jpg)
+
+#### The Fillings (Step 3)
+
+The only thing you really need to do here is cook the chicken breast. Season it with whatever you want, cook it in a pan with olive oil, and slice it up.
+
+I like to put a hefty amount of salt, pepper, rosemary, and paprika on mine. If I have it around, I'll also put some spicy harissa seasoning on it too.
+
+It doesn't really matter all that much what you season it with, just make sure it gets a nice sear on it.
+
+![IMG_5583_LR.jpg](IMG_5583_LR.jpg)
+![IMG_5587_LR.jpg](IMG_5587_LR.jpg)
+![IMG_5589_LR.jpg](IMG_5589_LR.jpg)
+![IMG_5591_LR.jpg](IMG_5591_LR.jpg)
+
+The last bit you need to do here is slice up the sun-dried tomatoes and green olives.
+
+#### Assemble the Sandwich (Step 4)
+
+First, slice up your bread into sandwich-sized pieces. Coat each side with the pesto spread.
+
+Then, lay down the chicken slices on one side of the bread and pop your olives and sun-dried tomatoes on top of the chicken.
+
+![IMG_5593_LR.jpg](IMG_5593_LR.jpg)
+
+Next, put the provolone cheese on top of the olives and sun-dried tomatoes. Then, put the arugula on top of the cheese and sprinkle the bits on top of the arugula.
+
+![IMG_5599_LR.jpg](IMG_5599_LR.jpg)
+
+#### Cook the Sandwich (Step 5)
+
+You can use a panini press, a skillet, or a pan for this. Just make sure you get a nice sear on the bread, the cheese is melted, and the sandwich is hot all the way through.
+
+Ensure that you are cooking your sandwiches on medium heat. You don't want to burn the bread before the cheese melts. Also, use a hefty amount of butter on the bread to get a nice crispy sear.
+
+> A crispy brown sear on the bread is a must. It's the law.
+
+![IMG_5605_LR.jpg](IMG_5605_LR.jpg)
+
+#### Serve the Sandwich (Step 6)
+
+The final step is to grate some more Parmigiano-Reggiano on top of the sandwich and hit it with some sea salt flakes. Slice the sandwich *diagonally* and serve it up.
+
+![IMG_5612_LR.jpg](IMG_5612_LR.jpg)
+
+Enjoy your sandwich!
+
+![IMG_5613_LR.jpg](IMG_5613_LR.jpg)
