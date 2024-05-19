@@ -6,7 +6,7 @@ description: "Grant's sandwich recipe"
 # The summary is for search engines and the main page
 summary: "Grant's sandwich recipe"
 
-date: 2023-08-10T00:00:00-00:00 # date of creation
+date: 2024-05-19T00:00:00-00:00 # date of creation
 
 tags: ["sandwich", "food"] # micro level categories
 # aliases: ["markdown-example"] # redirect, alias, shorthand url
