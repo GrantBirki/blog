@@ -82,7 +82,7 @@ These ingredients should be adequate for 4-6 sandwiches, depending on how much y
 
 > The fillings are the main components of the sandwich's interior.
 
-- Chicken breast, cooked and sliced
+- Chicken breast - seasoned, cooked, and sliced
 - Arugula (rocket)
 - Provolone cheese
 - Sun-dried tomatoes
@@ -93,3 +93,21 @@ These ingredients should be adequate for 4-6 sandwiches, depending on how much y
 > The bread is the foundation of the sandwich. Sourdough for a tangy and crispy sandwich, focaccia for a softer and more savory sandwich.
 
 - 1 loaf of sourdough or focaccia bread, your choice
+
+## Instructions
+
+This section will be broken down into two sections, the first is for a TL;DR (too long; didn't read) version of the recipe, and the second is a more detailed version.
+
+### TL;DR
+
+1. Toss everything from "The Bits" into a pan and cook until well browned. Set aside.
+2. Blend everything from "The Spread" in a food processor until smooth. Set aside.
+3. Slap the chicken breast into a pan, load it with seasonings of your choice, hit it with olive oil, and cook until done. Cut into thin slices. Set aside.
+4. Assemble the sandwich:
+    1. Spread the pesto onto the bread
+    2. Put the chicken on top of the pesto
+    3. Add the rest of the "Fillings" and "Bits" on top of the chicken
+    4. Close the sandwich
+5. Grill the sandwich until the bread is crispy and the cheese is melted and its super hot.
+6. Grate some more Parmigiano-Reggiano on top of the sandwich and hit it with some sea salt flakes.
+7. Eat the sandwich.
