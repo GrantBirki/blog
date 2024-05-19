@@ -112,7 +112,7 @@ params:
 
   # ---- opengraph ----
   title: Grant Birkinbine's Blog
-  description: blog | web posts | articles | notes | thoughts | ideas
+  description: blog | web posts | articles | notes | thoughts | ideas | food
   images:
     - default.png
   # ------- end -------
