@@ -43,9 +43,11 @@ draft: false
 
 This isn't any ordinary sandwich. This is Grant's sandwich. It is *the* sandwich. The sandwich to end all sandwiches. The sandwich that will make you question every sandwich you've ever had before. The sandwich that will make you question every sandwich you will ever have after. This is the sandwich that will make you question the very nature of sandwiches themselves.
 
-Time to jump right into it.
+I have been making this sandwich and different variations of it for years. It is something that I make for friends, family, and even just myself when I want something that is both comforting and delicious. So many people have asked me for the recipe that I decided to write it down and share it! *Yeah its mostly for you, Fi + Moira + Mom.*
 
 > Note: The ingredients here are just a rough guide. If you add more or less of something, it's not going to ruin the sandwich. It's a sandwich. It's not rocket science.
+
+Time to jump right into it.
 
 ## Ingredients
 
@@ -192,3 +194,13 @@ The final step is to grate some more Parmigiano-Reggiano on top of the sandwich 
 Enjoy your sandwich!
 
 ![IMG_5613_LR.jpg](IMG_5613_LR.jpg)
+
+### Honorable Sandwich Appearances
+
+Here are a few honorable appearances of the sandwich in the wild!
+
+#### Garden Party
+
+The UK gals garden party made with fresh focaccia bread from the Clapham farmers market.
+
+![garden-party.jpg](garden-party.jpg)
