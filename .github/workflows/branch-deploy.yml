@@ -40,10 +40,11 @@ jobs:
 
     steps:
       # execute the branch-deploy action
-      - uses: github/branch-deploy@v7.4.0
+      - uses: github/branch-deploy@v9
         id: branch-deploy
         with:
           trigger: ".deploy"
+          sticky_locks: "true" # optional see -> https://github.com/github/branch-deploy/blob/main/docs/hubot-style-deployment-locks.md
           environment_targets: production
           skip_completing: "true" # we will complete the deployment manually in the 'result' job
           admins: "GrantBirki"
@@ -57,7 +58,7 @@ jobs:
     steps:
       # checkout the project's repository based on the ref provided by the branch-deploy step
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ needs.trigger.outputs.ref }}
 
@@ -76,14 +77,14 @@ jobs:
 
       # build the site with hugo
       - name: build with hugo
-        run: hugo --gc --verbose --baseURL ${{ env.web_url }}
+        run: hugo --gc --logLevel info --baseURL ${{ env.web_url }}
 
       # this step is custom to my site and adds a 'commit' version to the site
       - name: write build version
         run: echo ${GITHUB_SHA} > ./public/version.txt
 
       # upload the built site as an artifact for the deploy step
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: site-artifact
           path: ./public
@@ -95,19 +96,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
+        if: ${{ needs.trigger.outputs.noop != 'true' }}
         with:
           name: site-artifact
           path: ./public
 
       # deploy the site to cloudflare pages
       - name: deploy
+        if: ${{ needs.trigger.outputs.noop != 'true' }}
         id: deployment
-        uses: cloudflare/wrangler-action@fcf648c7895751f5c39060e286527b900ee9e396 # pin@3.1.0
+        uses: cloudflare/wrangler-action@a84dcc6dd36c8769fbff7e622308c8050fc41f4f # pin@v3.5.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          wranglerVersion: '3.5.0'
+          wranglerVersion: '3.9.0'
           command: pages deploy public/ --project-name=blog-birki-io --branch=main
 
   # update the deployment result - manually complete the deployment that was created by the branch-deploy action
@@ -142,16 +145,33 @@ jobs:
             repos/{owner}/{repo}/deployments/${{ needs.trigger.outputs.deployment_id }}/statuses \
             -f environment='${{ needs.trigger.outputs.environment }}' \
             -f state=${DEPLOY_STATUS}
-        
+
       # use the GitHub CLI to remove the non-sticky lock that was created by the branch-deploy action
       - name: remove a non-sticky lock
         env:
           GH_REPO: ${{ github.repository }}
           GH_TOKEN: ${{ github.token }}
         run: |
+          # Fetch the lock.json file from the branch
           gh api \
-            --method DELETE \
-            repos/{owner}/{repo}/git/refs/heads/${{ needs.trigger.outputs.environment }}-branch-deploy-lock
+            --method GET \
+            repos/{owner}/{repo}/contents/lock.json?ref=${{ needs.trigger.outputs.environment }}-branch-deploy-lock \
+            --jq '.content' \
+            | base64 --decode \
+            > lock.json
+          
+          # Check if the sticky value is true
+          if [ "$(jq -r '.sticky' lock.json)" = "true" ]; then
+            echo "The lock is sticky, skipping the delete step"
+          else
+            # use the GitHub CLI to remove the non-sticky lock that was created by the branch-deploy action
+            echo "The lock is not sticky, deleting the lock"
+            gh api \
+              --method DELETE \
+              repos/{owner}/{repo}/git/refs/heads/${{ needs.trigger.outputs.environment }}-branch-deploy-lock
+          fi
+
+          rm lock.json
 
       # remove the default 'eyes' reaction from the comment that triggered the deployment
       # this reaction is added by the branch-deploy action by default
@@ -167,7 +187,7 @@ jobs:
       # if the deployment was successful, add a 'rocket' reaction to the comment that triggered the deployment
       - name: rocket reaction
         if: ${{ steps.deploy-status.outputs.DEPLOY_STATUS != 'failure' }}
-        uses: GrantBirki/comment@eab1bc94aa728cf526dcd6639bfd067512d4a5cb # pin@v2.0.6
+        uses: GrantBirki/comment@1e63d57e8ccc14dd83f5db2af382279aa12a0bbb # pin@v2.0.10
         with:
           comment-id: ${{ needs.trigger.outputs.comment_id }}
           reactions: rocket
@@ -175,7 +195,7 @@ jobs:
       # if the deployment failed, add a '-1' (thumbs down) reaction to the comment that triggered the deployment
       - name: failure reaction
         if: ${{ steps.deploy-status.outputs.DEPLOY_STATUS == 'failure' }}
-        uses: GrantBirki/comment@eab1bc94aa728cf526dcd6639bfd067512d4a5cb # pin@v2.0.6
+        uses: GrantBirki/comment@1e63d57e8ccc14dd83f5db2af382279aa12a0bbb # pin@v2.0.10
         with:
           comment-id: ${{ needs.trigger.outputs.comment_id }}
           reactions: "-1"
@@ -183,7 +203,7 @@ jobs:
       # if the deployment was successful, add a 'success' comment
       - name: success comment
         if: ${{ steps.deploy-status.outputs.DEPLOY_STATUS != 'failure' }}
-        uses: peter-evans/create-or-update-comment@c6c9a1a66007646a28c153e2a8580a5bad27bcfa # pin@v3.0.2
+        uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # pin@v4.0.0
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
@@ -196,7 +216,7 @@ jobs:
       # if the deployment was not successful, add a 'failure' comment
       - name: failure comment
         if: ${{ steps.deploy-status.outputs.DEPLOY_STATUS == 'failure' }}
-        uses: peter-evans/create-or-update-comment@c6c9a1a66007646a28c153e2a8580a5bad27bcfa # pin@v3.0.2
+        uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # pin@v4.0.0
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |

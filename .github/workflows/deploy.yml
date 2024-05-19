@@ -36,7 +36,7 @@ jobs:
     steps:
       # https://github.com/github/branch-deploy/blob/d3c24bd92505e623615b75ffdfac5ed5259adbdb/docs/merge-commit-strategy.md
       - name: deployment check
-        uses: github/branch-deploy@v7.4.0
+        uses: github/branch-deploy@v9
         id: deployment-check
         with:
           merge_deploy_mode: "true"
@@ -49,7 +49,7 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: set hugo version
         id: hugo-version
@@ -63,13 +63,13 @@ jobs:
         run: sudo dpkg -i vendor/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
 
       - name: build with hugo
-        run: hugo --gc --verbose --baseURL ${{ env.web_url }}
+        run: hugo --gc --logLevel info --baseURL ${{ env.web_url }}
 
       - name: write build version
         run: echo ${GITHUB_SHA} > ./public/version.txt
 
       # upload the built site as an artifact for the deploy step
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: site-artifact
           path: ./public
@@ -83,7 +83,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: site-artifact
           path: ./public
@@ -91,9 +91,9 @@ jobs:
       # deploy the site to cloudflare pages
       - name: deploy
         id: deployment
-        uses: cloudflare/wrangler-action@fcf648c7895751f5c39060e286527b900ee9e396 # pin@3.1.0
+        uses: cloudflare/wrangler-action@a84dcc6dd36c8769fbff7e622308c8050fc41f4f # pin@v3.5.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          wranglerVersion: '3.5.0'
+          wranglerVersion: '3.9.0'
           command: pages deploy public/ --project-name=blog-birki-io --branch=main

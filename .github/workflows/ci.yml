@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # read the hugo version from the .hugo-version file in this repository
       - name: set hugo version
@@ -33,4 +33,4 @@ jobs:
 
       # build the site with hugo
       - name: build with hugo
-        run: hugo --gc --verbose
+        run: hugo --gc --logLevel info
