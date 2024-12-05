@@ -171,6 +171,7 @@ permissions:
   deployments: write
   contents: write
   checks: read
+  statuses: read
 
 # The job that runs 'branch-deploy' logic
 # This run runs on PR comments, looks for `.deploy` in said PR comment...
@@ -189,10 +190,10 @@ jobs:
 
       # Run your deployment logic for your project here - examples seen below
 
-      # Checkout your projects repository based on the ref provided by the branch-deploy step
+      # Checkout your project's repository based on the exact commit SHA provided by the branch-deploy step
       - uses: actions/checkout@v4
         with:
-          ref: ${{ steps.branch-deploy.outputs.ref }}
+          ref: ${{ steps.branch-deploy.outputs.sha }}
 
       # Your own deployment logic goes here - it can be anything you want
       - name: fake regular deploy
@@ -208,12 +209,12 @@ After setting up this GitHub Action in your project, you can invoke branch deplo
 
 Here are some live examples of branch deployments in action:
 
-- [**This Blog!**](https://github.com/GrantBirki/blog/blob/6f951a51cf7519509b3025d439c3676c610babe7/.github/workflows/branch-deploy.yml) - That's right! The very text you are reading on this page was branch deployed using [github/branch-deploy](https://github.com/github/branch-deploy) and GitHub Actions
+- [**This Blog!**](https://github.com/GrantBirki/blog/blob/559b9be5cc3eac923be5d7923ec9a0b50429ced2/.github/workflows/branch-deploy.yml) - That's right! The very text you are reading on this page was branch deployed using [github/branch-deploy](https://github.com/github/branch-deploy) and GitHub Actions
 - [github/entitlements-config](https://github.com/github/entitlements-config/blob/076a1f0f9e8cc1f5acb8a0b8e133b0a1300c8191/.github/workflows/branch-deploy.yml)
-- [the-hideout/tarkov-api](https://github.com/the-hideout/tarkov-api/blob/be645d7750a0e440794229ce56aefeb4648b8892/.github/workflows/branch-deploy.yml) - A cloudflare workers example
-- [the-hideout/cloudflare](https://github.com/the-hideout/cloudflare/blob/f3b189b54f278d7e7844e5cc2fcdbb6f5afd3467/.github/workflows/branch-deploy.yml) - A Terraform example
+- [the-hideout/tarkov-api](https://github.com/the-hideout/tarkov-api/blob/1677543951d5f2a848c2650eb3400178b8f9a55b/.github/workflows/branch-deploy.yml) - A cloudflare workers example
+- [the-hideout/cloudflare](https://github.com/the-hideout/cloudflare/blob/3f3adedb729b9aba0cc324a161ad8ddd6f56141b/.github/workflows/branch-deploy.yml) - A Terraform example
 
-> For even more examples, check out the [github/branch-deploy documentation](https://github.com/github/branch-deploy/blob/d92479fbe9aa72262794c67fae581cf2c287eeac/docs/examples.md)
+> For even more examples, check out the [github/branch-deploy documentation](https://github.com/github/branch-deploy/blob/main/docs/examples.md)
 
 ## Conclusion 🏁
 
