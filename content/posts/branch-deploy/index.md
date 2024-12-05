@@ -209,7 +209,7 @@ After setting up this GitHub Action in your project, you can invoke branch deplo
 
 Here are some live examples of branch deployments in action:
 
-- [**This Blog!**](https://github.com/GrantBirki/blog/blob/6f951a51cf7519509b3025d439c3676c610babe7/.github/workflows/branch-deploy.yml) - That's right! The very text you are reading on this page was branch deployed using [github/branch-deploy](https://github.com/github/branch-deploy) and GitHub Actions
+- [**This Blog!**](https://github.com/GrantBirki/blog/blob/559b9be5cc3eac923be5d7923ec9a0b50429ced2/.github/workflows/branch-deploy.yml) - That's right! The very text you are reading on this page was branch deployed using [github/branch-deploy](https://github.com/github/branch-deploy) and GitHub Actions
 - [github/entitlements-config](https://github.com/github/entitlements-config/blob/076a1f0f9e8cc1f5acb8a0b8e133b0a1300c8191/.github/workflows/branch-deploy.yml)
 - [the-hideout/tarkov-api](https://github.com/the-hideout/tarkov-api/blob/1677543951d5f2a848c2650eb3400178b8f9a55b/.github/workflows/branch-deploy.yml) - A cloudflare workers example
 - [the-hideout/cloudflare](https://github.com/the-hideout/cloudflare/blob/3f3adedb729b9aba0cc324a161ad8ddd6f56141b/.github/workflows/branch-deploy.yml) - A Terraform example
