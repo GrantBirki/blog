@@ -214,7 +214,7 @@ Here are some live examples of branch deployments in action:
 - [the-hideout/tarkov-api](https://github.com/the-hideout/tarkov-api/blob/1677543951d5f2a848c2650eb3400178b8f9a55b/.github/workflows/branch-deploy.yml) - A cloudflare workers example
 - [the-hideout/cloudflare](https://github.com/the-hideout/cloudflare/blob/3f3adedb729b9aba0cc324a161ad8ddd6f56141b/.github/workflows/branch-deploy.yml) - A Terraform example
 
-> For even more examples, check out the [github/branch-deploy documentation](https://github.com/github/branch-deploy/blob/d92479fbe9aa72262794c67fae581cf2c287eeac/docs/examples.md)
+> For even more examples, check out the [github/branch-deploy documentation](https://github.com/github/branch-deploy/blob/main/docs/examples.md)
 
 ## Conclusion 🏁
 
