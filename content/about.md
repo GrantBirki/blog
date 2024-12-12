@@ -35,6 +35,8 @@ weight: 0
 draft: false
 ---
 
+test!
+
 ## @GrantBirki
 
 Hey its me, Grant Birkinbine 👋. On the internet I go by my handle `@GrantBirki`. I am a software engineer, security enthusiast, and love open source. This blog is mostly a collection of my thoughts, projects, and ideas around technical projects at work and in my free time. However, other stuff will be thrown in here as well - like sandwich recipes, and other fun stuffs.
