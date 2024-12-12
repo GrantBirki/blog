@@ -42,7 +42,7 @@ jobs:
 
     steps:
       # execute the branch-deploy action
-      - uses: github/branch-deploy@v9
+      - uses: github/branch-deploy@v10.0.0-rc.1
         id: branch-deploy
         with:
           trigger: ".deploy"
@@ -58,7 +58,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # checkout the project's repository based on the ref provided by the branch-deploy step
+      # checkout the project's repository based on the exact commit sha provided by the branch-deploy step
       - name: checkout
         uses: actions/checkout@v4
         with:
