@@ -108,7 +108,7 @@ jobs:
       - name: deploy
         if: ${{ needs.trigger.outputs.noop != 'true' }}
         id: deployment
-        uses: cloudflare/wrangler-action@392082e81ffbcb9ebdde27400634aa004b35ea37 # pin@v3.14.0
+        uses: cloudflare/wrangler-action@da0e0dfe58b7a431659754fdf3f186c529afbe65 # pin@v3.14.1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
