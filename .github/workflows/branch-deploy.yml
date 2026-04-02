@@ -42,7 +42,7 @@ jobs:
 
     steps:
       # execute the branch-deploy action
-      - uses: github/branch-deploy@v11
+      - uses: github/branch-deploy@fded0351b6b79f854b335c11b3d93063461dd288 # pin@v11
         id: branch-deploy
         with:
           trigger: ".deploy"
@@ -60,7 +60,7 @@ jobs:
     steps:
       # checkout the project's repository based on the exact commit sha provided by the branch-deploy step
       - name: checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # pin@v6
         with:
           ref: ${{ needs.trigger.outputs.sha }}
 
@@ -86,7 +86,7 @@ jobs:
         run: echo ${GITHUB_SHA} > ./public/version.txt
 
       # upload the built site as an artifact for the deploy step
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # pin@v7
         with:
           name: site-artifact
           path: ./public
@@ -98,7 +98,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/download-artifact@v8
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # pin@v8
         if: ${{ needs.trigger.outputs.noop != 'true' }}
         with:
           name: site-artifact
