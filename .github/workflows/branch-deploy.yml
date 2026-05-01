@@ -42,7 +42,7 @@ jobs:
 
     steps:
       # execute the branch-deploy action
-      - uses: github/branch-deploy@fded0351b6b79f854b335c11b3d93063461dd288 # pin@v11
+      - uses: github/branch-deploy@ddf8ca48e9cdb2d2c7c71dee428308b19af9313f # pin@v11.1.4
         id: branch-deploy
         with:
           trigger: ".deploy"
@@ -86,7 +86,7 @@ jobs:
         run: echo ${GITHUB_SHA} > ./public/version.txt
 
       # upload the built site as an artifact for the deploy step
-      - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # pin@v7
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # pin@v7
         with:
           name: site-artifact
           path: ./public
@@ -108,7 +108,7 @@ jobs:
       - name: deploy
         if: ${{ needs.trigger.outputs.noop != 'true' }}
         id: deployment
-        uses: cloudflare/wrangler-action@da0e0dfe58b7a431659754fdf3f186c529afbe65 # pin@v3.14.1
+        uses: cloudflare/wrangler-action@9acf94ace14e7dc412b076f2c5c20b8ce93c79cd # pin@v3.15.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
