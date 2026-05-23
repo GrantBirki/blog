@@ -96,6 +96,9 @@ jobs:
     needs: [ trigger, build ]
     if: ${{ needs.trigger.outputs.continue == 'true' }} # only run if the trigger job set continue to true
     runs-on: ubuntu-latest
+    environment:
+      name: production
+      deployment: false
 
     steps:
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # pin@v8
