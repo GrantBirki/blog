@@ -20,8 +20,7 @@ defaults:
   run:
     shell: bash
 
-permissions:
-  contents: read
+permissions: {}
 
 # set an environment variable for use in the jobs pointing to my site
 env:
@@ -30,6 +29,9 @@ env:
 jobs:
   deployment-check:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: read
     outputs: # set outputs for use in downstream jobs
       continue: ${{ steps.deployment-check.outputs.continue }}
 
@@ -46,49 +48,68 @@ jobs:
     if: ${{ needs.deployment-check.outputs.continue == 'true' }}
     needs: deployment-check
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      artifact_id: ${{ steps.artifact.outputs.artifact-id }}
 
     steps:
-      - name: checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # pin@v6
-
-      - name: set hugo version
-        id: hugo-version
-        run: |
-          HUGO_VERSION=$(cat .hugo-version)
-          echo "HUGO_VERSION=${HUGO_VERSION}" >> $GITHUB_OUTPUT
-
-      - name: install vendored hugo cli
+      - name: validate selected revisions
         env:
-          HUGO_VERSION: ${{ steps.hugo-version.outputs.HUGO_VERSION }}
-        run: sudo dpkg -i vendor/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          TRUSTED_SHA: ${{ github.sha }}
+          SELECTED_SHA: ${{ github.sha }}
+        run: |
+          [[ "$TRUSTED_SHA" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$SELECTED_SHA" =~ ^[0-9a-f]{40}$ ]]
 
-      - name: build with hugo
-        run: hugo --gc --logLevel info --baseURL ${{ env.web_url }}
-
-      - name: write build version
-        run: echo ${GITHUB_SHA} > ./public/version.txt
-
-      # upload the built site as an artifact for the deploy step
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # pin@v7
+      - name: checkout trusted tooling
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # pin@v6
         with:
-          name: site-artifact
-          path: ./public
+          ref: ${{ github.sha }}
+          path: trusted
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: checkout selected content
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # pin@v6
+        with:
+          ref: ${{ github.sha }}
+          path: candidate
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: build with verified Hugo
+        id: site
+        env:
+          TRUSTED_SHA: ${{ github.sha }}
+          SELECTED_SHA: ${{ github.sha }}
+          BASE_URL: ${{ env.web_url }}
+        run: python3 trusted/script/ci/build_site.py
+
+      - name: upload artifact
+        id: artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # pin@v7
+        with:
+          name: site-${{ github.run_id }}-${{ github.run_attempt }}-${{ github.sha }}
+          path: ${{ steps.site.outputs.path }}
+          if-no-files-found: error
 
   deploy:
     if: ${{ needs.deployment-check.outputs.continue == 'true' }}
     needs: [ deployment-check, build ]
+    runs-on: ubuntu-latest
+    permissions: {}
     environment:
       name: production
       url: ${{ env.web_url }}
-    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # pin@v8
+      - name: download built site
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # pin@v8
         with:
-          name: site-artifact
+          artifact-ids: ${{ needs.build.outputs.artifact_id }}
           path: ./public
 
-      # deploy the site to cloudflare pages
       - name: deploy
         id: deployment
         uses: cloudflare/wrangler-action@9acf94ace14e7dc412b076f2c5c20b8ce93c79cd # pin@v3.15.0
