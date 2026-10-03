@@ -26,6 +26,8 @@ permissions: {}
 env:
   web_url: https://blog.birki.io/
 
+cache-mode: none
+
 jobs:
   deployment-check:
     runs-on: ubuntu-latest
